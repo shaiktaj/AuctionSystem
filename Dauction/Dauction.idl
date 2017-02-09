@@ -1,0 +1,31 @@
+module DauctionApp{
+	interface Dauction{	
+		exception IncorrectOfferException{
+		string description;
+};
+exception IncorrectSellException{
+string description;
+};
+exception IncorrectBidException{
+string description;		
+};
+exception IncorrectStatusException{
+string description;	
+};		
+//methods
+		
+typedef struct AuctionStatus {   
+string user; 
+string item; 
+float currentPrice;
+} Status;
+		
+boolean offer_item(in string item_name, in string seller_id, in float init_price) raises (IncorrectOfferException);		
+string view_high_bidder(in string item_name) raises (IncorrectSellException);
+boolean sell(in string item_name) raises (IncorrectSellException);
+boolean bid (in string user_id, in float offer_price) raises (IncorrectBidException);		
+string view_bid_status(in string user_id) raises (IncorrectBidException);		
+Status view_auction_status() raises (IncorrectStatusException);		
+//exceptions	
+};
+};
