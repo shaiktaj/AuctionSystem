@@ -1,6 +1,11 @@
 # AuctionSystem
 AuctionSystem using Java Corba
 
+
+
+The objective of this machine problem is to use CORBA to build a Distributed Auction Service, which allows the buying and
+selling of individual items, using an English auction protocol (increasing price, current price visible to all parties). Optionally, other auction protocols could be supported, such as Dutch (the public price is decreased until someone bids) or some variant of sealed-bid (each interested buyer submits one bid, all bids are considered at once, prices are not public, and the bidder making the highest bid would win the object being sold for either the highest price–a first-price auction–or the second-highest–a second price.
+
 I have created 3 Programs – 1 for AuctionServer, 1 for AuctionSeller and the other 1 for
 AuctionClient.
 
